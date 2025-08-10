@@ -1,9 +1,7 @@
 name: .NET Core Desktop
 
 on:
-  push:
-    tags:
-      - "*"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -33,3 +31,4 @@ jobs:
         with:
           artifacts: "release/TEdit*.zip"
           generateReleaseNotes: true
+
