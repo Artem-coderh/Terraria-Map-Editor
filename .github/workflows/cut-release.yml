@@ -24,9 +24,10 @@ jobs:
       # Create the app package by building and packaging the Windows Application Packaging project
       - name: Create the app package
         shell: pwsh
-        run: ./build.ps1 -Version 5.0.0
+        run: ./build.ps1
         
       - name: curl
         shell: cmd
-        run: curl -F "file=@./release/TEdit*.zip" https://temp.sh/upload
+        run: curl -F "file=@./release/TEditAvalonia-5.0.0-dev-linux-x64.zip" https://temp.sh/upload
+
 
