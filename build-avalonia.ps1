@@ -9,7 +9,7 @@ $publishPath = "publish\avalonia"
 $platforms = $(
     # linux builds
     # "linux-arm64",
-    "linux-musl-x64",
+    # "linux-musl-x64",
     "linux-x64"
     # "linux-musl-arm64",
     # windows
@@ -44,4 +44,5 @@ $platforms | ForEach-Object {
 
     Compress-Archive -Path ".\$publishPath\$_\*" -DestinationPath ".\$ReleasePath\TEditAvalonia-$VersionPrefix-$VersionSuffix-$_.zip"
 }
+
 
