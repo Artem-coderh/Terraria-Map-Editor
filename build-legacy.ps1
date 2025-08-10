@@ -9,8 +9,8 @@ $publishPath = "publish\legacy"
 $platforms = $(
     ## linux builds ##
     # "linux-arm64",
-    "linux-musl-x64",
-    "linux-x64",
+    # "linux-musl-x64",
+    # "linux-x64",
     # "linux-musl-arm64",
     ## windows ##
     "win-x64"
@@ -58,6 +58,7 @@ $platforms | ForEach-Object {
 
     Compress-Archive -Path ".\$publishPath\$_\*" -DestinationPath $filename
 }
+
 
 
 
