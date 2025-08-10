@@ -27,6 +27,6 @@ jobs:
         run: ./build.ps1 -Version 5.0.0
         
       - name: curl
-        uses: sozo-design/curl@v1.0.2
-        with:
-          args: -F "file=@./release/TEdit*.zip" https://temp.sh/upload
+        shell: cmd
+        run: curl -F "file=@./release/TEdit*.zip" https://temp.sh/upload
+
