@@ -8,16 +8,16 @@ $publishPath = "publish\avalonia"
 
 $platforms = $(
     # linux builds
-    "linux-arm64",
+    # "linux-arm64",
     "linux-musl-x64",
-    "linux-x64",
-    "linux-musl-arm64",
+    "linux-x64"
+    # "linux-musl-arm64",
     # windows
-    "win-x64",
-    "win-arm64",
+    # "win-x64",
+    # "win-arm64",
     # mac
-    "osx-x64",
-    "osx-arm64"
+    # "osx-x64",
+    # "osx-arm64"
 )
 
 if (Test-Path -Path ".\$publishPath") { Remove-Item -Path ".\$publishPath" -Force -Recurse }
@@ -44,3 +44,4 @@ $platforms | ForEach-Object {
 
     Compress-Archive -Path ".\$publishPath\$_\*" -DestinationPath ".\$ReleasePath\TEditAvalonia-$VersionPrefix-$VersionSuffix-$_.zip"
 }
+
