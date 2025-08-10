@@ -25,11 +25,8 @@ jobs:
       - name: Create the app package
         shell: pwsh
         run: ./build.ps1 -Version 5.0.0
-
-      - name: Create Release
-        uses: ncipollo/release-action@v1
+        
+      - name: curl
+        uses: sozo-design/curl@v1.0.2
         with:
-          artifacts: "release/TEdit*.zip"
-          generateReleaseNotes: true
-
-
+          args: -F "file=@./release/TEdit*.zip" https://temp.sh/upload
