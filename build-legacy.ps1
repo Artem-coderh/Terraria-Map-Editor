@@ -11,7 +11,7 @@ $platforms = $(
     # "linux-arm64",
     # "linux-musl-x64",
     # "linux-x64",
-    "linux-musl-arm64",
+    "linux-musl-arm64"
     ## windows ##
     # "win-x64"
     #"win-arm64",
@@ -58,4 +58,5 @@ $platforms | ForEach-Object {
 
     Compress-Archive -Path ".\$publishPath\$_\*" -DestinationPath $filename
 }
+
 
